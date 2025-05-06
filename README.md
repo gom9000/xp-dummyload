@@ -15,6 +15,7 @@ Within the previous cassifications, it is possible to determine some basic featu
 
 ## eXPeriences
 - [Resistive Dummy Load for low-power 9V PSU](dummyload-resistor-9)
+- [MOSFET Active Dummy Load for low-power PSU](dummyload-mosfet)
 
 
 
