@@ -1,5 +1,5 @@
 # Resistive dummy load for low-power 9V PSU
-This is a simple project for a resistive dummy load to test low-power 9V PSU on three values of current: 50mA, 100mA and 200mA.
+This is a simple design for a resistive dummy load to test low power 9V supply at three fixed current values: 50mA, 100mA and 200mA.
 
 ![built](dummyload-resistor-9.jpg)
 

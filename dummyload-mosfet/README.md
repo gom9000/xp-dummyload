@@ -1,7 +1,9 @@
-# Dummy Load Resistor for low-power 9V PSU
-This is a simple project for a dummy load resistor to test low-power 9V PSU on three values of current: 50mA, 100mA and 200mA.
+# MOSFET active dummy load for low-power PSU
+This is a simple design for an active dummy load, using a MOSFET, to test a low power supply with current ratings up to $1A$.
+Trimmer Tr1 can be adjusted to present $1.2V$ on pin 3 of the op-amp, when P1 is full.
+The MOSFET must dissipate a power of $(Vpsu - 1.2) * 1A$.
 
-![built](dummyload-resistor-9.jpg)
+![built](dummyload-mosfet.jpg)
 
 
 ## Specifications
@@ -11,7 +13,7 @@ This is a simple project for a dummy load resistor to test low-power 9V PSU on t
 Schematics and PCB layouts are designed with ExpressPCB free CAD software.
 
 #### Schematic:
-![board-schematic](hardware/dummyload-resistor-9_sch.jpg)
+![board-schematic](hardware/dummyload-mosfet_sch.jpg)
 
 #### PCB Layout:
-![board-pcb](hardware/dummyload-resistor-9_pcb.jpg)
+![board-pcb](hardware/dummyload-mosfet_pcb.jpg)
