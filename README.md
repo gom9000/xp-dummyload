@@ -2,8 +2,8 @@
 A series of simple experiences on build dummy loads to test small PSU.<br>
 The type of load leads to classifying this kind of devices as follows:
 
-- Resistive (passive) load
-- Electronics (active) load
+- Passive resistive load
+- Active electronics load
 
 Within the previous cassifications, it is possible to determine some basic features:
 
