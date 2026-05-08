@@ -38,9 +38,11 @@ $\implies$ A resistor of at least $4W$ is required.
 
 To achieve these values using standard resistors available in the *box*, the following series and parallel combinations are used (this also helps distribute heat dissipation across multiple elements):
 
-$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel ($ \approx 195\Omega / 46mA$).<br/>
-$R \approx 90\Omega : 2 \cdot 47\Omega (2W)$ in series ($ \approx 94\Omega / 95mA$).<br/>
-$R \approx 45\Omega : 4 \cdot 47\Omega (2W)$ in a series-parallel network ($ \approx 47\Omega / 191mA$).<br/>
+$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel ($ \approx 195\Omega / 46mA$).
+
+$R \approx 90\Omega : 2 \cdot 47\Omega (2W)$ in series ($ \approx 94\Omega / 95mA$).
+
+$R \approx 45\Omega : 4 \cdot 47\Omega (2W)$ in a series-parallel network ($ \approx 47\Omega / 191mA$).
 
 Since the available standard resistors resulted in slightly lower currents than the target values, **indicator LEDs** were integrated into each branch. These LEDs act as auxiliary loads.<br/>
 Assuming a forward voltage drop of approximately $2V$ for each *green* LED:<br/>
@@ -51,7 +53,7 @@ LEDs slightly compensate the current deficit introduced by standard resistor val
 
 ## Implementation and Test
 #### PCB Layout
-The circuit was assembled on a custom PCB designed with ExpressPCB.
+The circuit was assembled on a custom PCB (protoboard $30 \times 70mm$) designed with ExpressPCB.
 
 ![board-pcb](hardware/dummyload-resistor-9_pcb.jpg)
 
@@ -74,7 +76,7 @@ The circuit was tested using a **GVDA 30V/10A** switching laboratory power suppl
 | $50mA$ | $195\Omega$ | $53mA$ | $0.48W$ | $40^\circ C$ |
 | $100mA$ | $94\Omega$ | $103mA$ | $0.93W$ | $52^\circ C$ |
 | $200mA$ | $47\Omega$ | $200mA$ | $1.80W$ | $62^\circ C$ |
-| Combined | $27\Omega$ | $352mA$ | $3.17W$ | $77^\circ C$ |
+| Combined | $\approx 26\Omega$ | $352mA$ | $3.17W$ | $77^\circ C$ |
 
 
 ## Conclusions
