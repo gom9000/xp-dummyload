@@ -1,7 +1,6 @@
 # PSU Dummy Load eXPerience
 A series of documented laboratory experiences on building simple dummy loads to test small PSUs.
 
-This project explores the transition from simple passive components to active electronic control.
 
 ## Theoretical Background
 The type of load leads to classifying these devices as follows:
@@ -27,7 +26,7 @@ Within these classifications, we can implement different operational modes:
 
 A "Keep It Simple" approach using a switchable resistive network.
 
-- **Key Features**: Constant Resistance (CR) mode, selectable loads (50mA, 100mA, 200mA), thermal analysis up to 3.2W.
+- **Key Features**: Constant Resistance (CR) mode, selectable loads (50mA, 100mA and 200mA on 9V PSU), thermal analysis up to 3.2W.
 
 ### **[MOSFET Active Dummy Load for low-power PSU](dummyload-mosfet)**
 **Type**: Active Electronic | **Complexity**: Medium | **Status**: Completed
