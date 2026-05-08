@@ -38,8 +38,7 @@ $\implies$ A resistor of at least $4W$ is required.
 
 To achieve these values using standard resistors available in the *box*, the following series and parallel combinations are used (this also helps distribute heat dissipation across multiple elements):
 
-$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel $( \approx 195\Omega / 46mA)$.
-
+$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel $( \approx 195\Omega / 46mA)$.<br/>
 $R \approx 90\Omega : 2 \cdot 47\Omega (2W)$ in series $( \approx 94\Omega / 95mA)$.<br/>
 $R \approx 45\Omega : 4 \cdot 47\Omega (2W)$ in a series-parallel network $( \approx 47\Omega / 191mA)$.
 
