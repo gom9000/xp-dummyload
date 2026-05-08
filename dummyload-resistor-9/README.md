@@ -38,11 +38,10 @@ $\implies$ A resistor of at least $4W$ is required.
 
 To achieve these values using standard resistors available in the *box*, the following series and parallel combinations are used (this also helps distribute heat dissipation across multiple elements):
 
-$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel ($ \approx 195\Omega / 46mA$).
+$R \approx 180\Omega : 2 \cdot 390\Omega (0.5W)$ in parallel $( \approx 195\Omega / 46mA)$.
 
-$R \approx 90\Omega : 2 \cdot 47\Omega (2W)$ in series ($ \approx 94\Omega / 95mA$).
-
-$R \approx 45\Omega : 4 \cdot 47\Omega (2W)$ in a series-parallel network ($ \approx 47\Omega / 191mA$).
+$R \approx 90\Omega : 2 \cdot 47\Omega (2W)$ in series $( \approx 94\Omega / 95mA)$.<br/>
+$R \approx 45\Omega : 4 \cdot 47\Omega (2W)$ in a series-parallel network $( \approx 47\Omega / 191mA)$.
 
 Since the available standard resistors resulted in slightly lower currents than the target values, **indicator LEDs** were integrated into each branch. These LEDs act as auxiliary loads.<br/>
 Assuming a forward voltage drop of approximately $2V$ for each *green* LED:<br/>
@@ -68,7 +67,7 @@ The circuit was tested using a **GVDA 30V/10A** switching laboratory power suppl
 
 **Test 4 (Stress Test - Combined Load)**: Connecting all branches simultaneously ($50mA + 100mA + 200mA$). The voltage remained stable at $9.00V$ with a measured current of $352mA$ ($3.168W$). After the test period, the temperature of the resistors on the $200mA$ branch reached $77^\circ C$. At this temperature, the components became too hot to touch. This combined mode is recommended for short-term tests only.
 
-***Note on Test 4***: The measured current ($352mA$) is slightly lower than the sum of the individual branches ($356mA$). This small discrepancy ($\approx 1\%$) is attributed to parasitic voltage drops across connection wires and PCB traces.
+***Note on Test 4***: The measured current ($352mA$) is slightly lower than the sum of the individual branches ($356mA$). This small discrepancy ($\approx 1$%) is attributed to parasitic voltage drops across connection wires and PCB traces.
 
 #### Test Summary
 | Load | Resistance | Measured Current | Power | Temp |
