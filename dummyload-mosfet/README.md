@@ -28,7 +28,7 @@ At $1\text{A}$ with $R7 = 1.2\Omega$, the formula is $(V_{psu} - 1.2\text{V}) \c
 
 The use of a $2.7\text{V}$ Zener diode ($DZ$) and an Op-Amp buffer ($U1a$) ensures a stable reference, decoupling the control logic from supply voltage fluctuations.
 
-*Note: While $R7$ dissipates a small constant power ($\approx 1.2\text{W}$ @ $1\text{A}$), the MOSFET $Q1$ bears the main thermal stress, which increases linearly with $V_{psu}$.*
+*Note*: While $R7$ dissipates a small constant power ($\approx 1.2\text{W}$ @ $1\text{A}$), the MOSFET $Q1$ bears the main thermal stress, which increases linearly with $V_{psu}$.
 
 The MOSFET used is an **STP3NC60** ($600\text{V}$, $3\text{A}$). Its relatively high $R_{ds(on)}$ $(3.3\Omega)$ defines the minimum operating voltage (**Compliance Voltage**) at high currents ($1A$):
 
