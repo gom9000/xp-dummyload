@@ -59,7 +59,7 @@ This method assumes $R7$ is exactly $1.2\Omega$.
 With $P1$ set to its maximum position, adjust trimmer $Tr1$ until the voltage at pin 3 of $U1$ reaches $1.2V$. This ensures that at full scale, the load draws exactly $1A$ (given $I = V_{ref} / R7$).
 
 **Method B: Empirical (Current-based)**<br/>
-Since the shunt resistor $R7$ has a wide tolerance, to calibrate the device:
+Since both the shunt resistor $R7$ and the Zener diode $DZ$ (reference voltage) have standard tolerances, to calibrate the device:
 1. Connect a reliable Ammeter in series with the PSU under test.
 2. Set the user potentiometer $P1$ to its maximum position.
 3. Adjust trimmer $Tr1$ until the Ammeter reads exactly $1.00A$.

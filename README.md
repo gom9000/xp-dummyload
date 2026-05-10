@@ -1,6 +1,10 @@
 # PSU Dummy Load eXPerience
 A series of documented laboratory experiences on building simple dummy loads to test small PSUs.
 
+These experiences are guided by the **KIS (Keep It Simple)** philosophy, which in our vision includes the "build with what you have" principle. 
+
+Designing with simple or "standard-grade" components requires extra attention to detail to ensure that hardware limitations do not affect the final reliability. Every "added" element, such as a calibration trimmer or a specific resistor network, is strategically chosen to bridge the gap between minimalist resources and more professional-level results.
+
 
 ## Theoretical Background
 The type of load leads to classifying these devices as follows:
@@ -24,7 +28,7 @@ Within these classifications, we can implement different operational modes:
 ### **[Resistive Dummy Load for low-power 9V PSU](dummyload-resistor-9)**
 **Type**: Passive Resistive | **Complexity**: Low | **Status**: Completed
 
-A "Keep It Simple" approach using a switchable resistive network.
+A simple approach using a switchable resistive network.
 
 - **Key Features**: Constant Resistance (CR) mode, selectable loads (50mA, 100mA and 200mA on 9V PSU), thermal analysis up to 3.2W.
 
