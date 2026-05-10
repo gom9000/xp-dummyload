@@ -42,7 +42,7 @@ This means the load can maintain $1\text{A}$ only if the PSU supply provides at 
 The control logic (Op-Amp) requires a dedicated supply voltage ($V_{cc}$) to drive the MOSFET Gate.
 - Recommended $V_{cc}$: $9\text{V}$ to $15\text{V}$ (Standard $12\text{V}$ DC adapter).
 - Minimum $V_{cc}$: Approximately $8\text{V}$. This limit is due to the MOSFET's Gate threshold voltage ($V_{gs(th)} \approx 4.5\text{V}$) plus the voltage drop across the shunt resistor ($1.2\text{V}$) and the Op-Amp's internal output swing limitation ($\approx 2\text{V}$ below $V_{cc}$).
-- Maximum $V_{cc}$: $30\text{V}$ (Limited by the LM358 and the $2.7\text{V}$ Zener biasing resistor $R1$).
+- Maximum $V_{cc}$: $30\text{V}$ (Limited by the LM358 and the $2.7\text{V}$ Zener biasing resistor $R2$).
 
 
 
