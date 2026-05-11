@@ -21,14 +21,20 @@ Design and development of a simple **active MOSFET dummy load** to test low-powe
 ![board-schematic](hardware/dummyload-mosfet_sch.jpg)
 
 #### Circuit Analysis
-The circuit operates as a closed-loop current regulator. The Op-Amp ($U1b$) compares the reference voltage from $P1$ with the feedback voltage across the shunt resistor $R7$.
+The circuit operates as a closed-loop current regulator using negative feedback to maintain a constant current regardless of input voltage variations.
 
-The MOSFET must dissipate a power of $P = (V_{psu} - V_{R7}) \cdot I$.<br/>
-At $1\text{A}$ with $R7 = 1.2\Omega$, the formula is $(V_{psu} - 1.2\text{V}) \cdot 1\text{A}$.
+**1. Reference Voltage ($V_{ref}$)**: The Zener diode ($DZ$) and potentiometer $P1$ set the target current. The first stage ($U1a$) of the Op-Amp acts as a high-impedance buffer, decoupling the reference from the control loop to ensure stability.
 
-The use of a $2.7\text{V}$ Zener diode ($DZ$) and an Op-Amp buffer ($U1a$) ensures a stable reference, decoupling the control logic from supply voltage fluctuations.
+**2. Current Sensing**: The load current ($I_{load}$) flows through the shunt resistor $R7$, generating a feedback voltage $V_{sense} = I_{load} \cdot R7$.
 
-*Note*: While $R7$ dissipates a small constant power ($\approx 1.2\text{W}$ @ $1\text{A}$), the MOSFET $Q1$ bears the main thermal stress, which increases linearly with $V_{psu}$.
+**3. Error Correction**: The second stage ($U1b$) compares $V_{ref}$ with $V_{sense}$. It dynamically adjusts the MOSFET's Gate voltage so that $V_{sense}$ always matches $V_{ref}$. The regulated current is thus defined by:
+$$I = \frac{V_{ref}}{R7}$$
+*Note*: With $R7 = 1.2\Omega$, a $1.2V$ reference results in exactly $1A$ of load current.
+
+**Power and Thermal Constraints**:<br/>
+The MOSFET must dissipate a power of:
+$$P = (V_{psu} - V_{R7}) \cdot I$$
+At $1A$ load, $R7$ dissipates a constant $\approx 1.2W$, while the MOSFET dissipation increases linearly with the PSU voltage.
 
 The MOSFET used is an **STP3NC60** ($600\text{V}$, $3\text{A}$). Its relatively high $R_{ds(on)}$ $(3.3\Omega)$ defines the minimum operating voltage (**Compliance Voltage**) at high currents ($1A$):
 
@@ -39,11 +45,9 @@ This means the load can maintain $1\text{A}$ only if the PSU supply provides at 
 *Note*: The STP3NC60 was selected due to immediate availability, although it is not optimized for low-voltage linear operation because of its relatively high Rds(on).
 
 **Control Supply($V_{cc}$)**:<br/>
-The control logic (Op-Amp) requires a dedicated supply voltage ($V_{cc}$) to drive the MOSFET Gate.
-- Recommended $V_{cc}$: $9\text{V}$ to $15\text{V}$ (Standard $12\text{V}$ DC adapter).
-- Minimum $V_{cc}$: Approximately $8\text{V}$. This limit is due to the MOSFET's Gate threshold voltage ($V_{gs(th)} \approx 4.5\text{V}$) plus the voltage drop across the shunt resistor ($1.2\text{V}$) and the Op-Amp's internal output swing limitation ($\approx 2\text{V}$ below $V_{cc}$).
-- Maximum $V_{cc}$: $30\text{V}$ (Limited by the LM358 and the $2.7\text{V}$ Zener biasing resistor $R2$).
-
+The control logic (Op-Amp) requires a dedicated supply voltage $V_{cc}$: $9\text{V}$ to $15\text{V}$ (Standard $12\text{V}$ DC adapter) to drive the MOSFET Gate.<br/>
+The minimum $V_{cc}$ $(\approx 8V)$ is dictated by the Gate threshold $(V_{gs(th)} \approx 4.5\text{V}) + V_{R7} (1.2V) +$ the Op-Amp's internal overhead $(\approx 2V)$.<br/>
+Maximum $V_{cc}$ is limited by the LM358 and the Zener biasing resistor $R2$.
 
 
 ## Implementation and Test
