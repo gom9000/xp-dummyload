@@ -3,7 +3,7 @@
 ## Background and Goal
 Design and development of a simple **resistive static load** to test small **$9V$** Power Supply Units (PSUs).
 
-![built](dummyload-resistor-9.jpg)
+![built](resources/dummyload-resistor-9.jpg)
 
 
 ## Requirements
@@ -15,10 +15,10 @@ Design and development of a simple **resistive static load** to test small **$9V
 
 ## Design
 
-#### Schematic
-![board-schematic](hardware/dummyload-resistor-9_sch.jpg)
+### Schematic
+![board-schematic](resources/dummyload-resistor-9_sch.jpg)
 
-#### Circuit Analysis
+### Circuit Analysis
 The resistor values ($R=V/I$) and power ratings ($P=V^2/R$) are calculated for each target current. A conservative derating factor was applied by selecting resistors with at least twice the calculated power dissipation.
 
 **For $50mA$ target**:<br/>
@@ -50,12 +50,12 @@ LEDs slightly compensate the current deficit introduced by standard resistor val
 
 
 ## Implementation and Test
-#### PCB Layout
+### PCB Layout
 The circuit was assembled on a custom PCB (protoboard $30 \times 70mm$) designed with ExpressPCB.
 
-![board-pcb](hardware/dummyload-resistor-9_pcb.jpg)
+![board-pcb](resources/dummyload-resistor-9_pcb.jpg)
 
-#### Test Log
+### Test Log
 The circuit was tested using a **GVDA 30V/10A** switching laboratory power supply. Component temperature was measured using a **GVDA GD128** digital multimeter. Tests were conducted in a closed, non-ventilated environment with an ambient temperature of $21^\circ C$.
 
 **Test 1 (Low Load)**: Connecting the $50mA$ branch for 10 minutes. The voltage remained stable at $9.00V$ with a measured current of $53mA$ ($0.477W$). After the test period, the two resistors reached a temperature of $40^\circ C$. At this temperature, the components remained comfortable to the touch, confirming good thermal margins for this load.
@@ -68,7 +68,7 @@ The circuit was tested using a **GVDA 30V/10A** switching laboratory power suppl
 
 ***Note on Test 4***: The measured current ($352mA$) is slightly lower than the sum of the individual branches ($356mA$). This small discrepancy ($\approx 1$%) is attributed to parasitic voltage drops across connection wires and PCB traces.
 
-#### Test Summary
+### Test Summary
 | Load | Resistance | Measured Current | Power | Temp |
 |---|---|---|---|---|
 | $50mA$ | $195\Omega$ | $53mA$ | $0.48W$ | $40^\circ C$ |

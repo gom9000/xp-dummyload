@@ -3,7 +3,7 @@
 ## Background and Goal
 Design and development of a simple **active MOSFET dummy load** to test low-power Power Supply Units (PSUs) with current rating up to $1A$.
 
-![built](dummyload-mosfet.jpg)
+![built](resources/dummyload-mosfet.jpg)
 
 
 ## Requirements
@@ -17,10 +17,10 @@ Design and development of a simple **active MOSFET dummy load** to test low-powe
 
 ## Design
 
-#### Schematic
-![board-schematic](hardware/dummyload-mosfet_sch.jpg)
+### Schematic
+![board-schematic](resources/dummyload-mosfet_sch.jpg)
 
-#### Circuit Analysis
+### Circuit Analysis
 The circuit operates as a closed-loop current regulator using negative feedback to maintain a constant current regardless of input voltage variations.
 
 **1. Reference Voltage ($V_{ref}$)**: The Zener diode ($DZ$) and potentiometer $P1$ set the target current. The first stage ($U1a$) of the Op-Amp acts as a high-impedance buffer, decoupling the reference from the control loop to ensure stability.
@@ -53,9 +53,9 @@ Maximum $V_{cc}$ is limited by the LM358 and the Zener biasing resistor $R2$.
 ## Implementation and Test
 #### PCB Layout
 The circuit was assembled on a custom PCB (protoboard $30 \times 70mm$) designed with ExpressPCB.
-![board-pcb](hardware/dummyload-mosfet_pcb.jpg)
+![board-pcb](resources/dummyload-mosfet_pcb.jpg)
 
-#### Calibration Procedure
+### Calibration Procedure
 The circuit offers two ways to calibrate the full-scale current ($1A$ target at maximum $P1$ position).
 
 **Method A: Theoretical (Voltage-based)**<br/>
@@ -70,7 +70,7 @@ Since both the shunt resistor $R7$ and the Zener diode $DZ$ (reference voltage) 
 
 *Note:* During empirical calibration, it was observed that with potentiometer $P1$ at its minimum position, the output current is effectively zero. This confirms that despite the LM358 not being a full rail-to-rail Op-Amp, its ability to swing the output down to the negative rail (GND) is sufficient to fully turn off the MOSFET.
 
-#### Test Log
+### Test Log
 The circuit was tested using a **GVDA 30V/10A** switching laboratory power supply. Component temperature was measured using a **GVDA GD128** digital multimeter. Tests were conducted in a closed, non-ventilated environment with an ambient temperature of $21^\circ C$.
 
 **Test 1 (Active Load - CC Mode)**:
