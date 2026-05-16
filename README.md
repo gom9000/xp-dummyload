@@ -26,14 +26,14 @@ Within these classifications, we can implement different operational modes:
 
 ## eXPeriences
 ### **[Resistive Dummy Load for low-power 9V PSU](./dummyload-resistor-9)**
-**Type**: Passive Resistive | **Complexity**: Low | **Status**: Completed
+**Type**: Passive Resistive | **Status**: Completed
 
 A simple approach using a switchable resistive network.
 
 - **Key Features**: Constant Resistance (CR) mode, selectable loads (50mA, 100mA and 200mA on 9V PSU), thermal analysis up to 3.2W.
 
 ### **[MOSFET Active Dummy Load for low-power PSU](./dummyload-mosfet)**
-**Type**: Active Electronic | **Complexity**: Medium | **Status**: Completed
+**Type**: Active Electronic| **Status**: Completed
 
 Transitioning from static resistors to linear MOSFET control for adjustable current.
 
